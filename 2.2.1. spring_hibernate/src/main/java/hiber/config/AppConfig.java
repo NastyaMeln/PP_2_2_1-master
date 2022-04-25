@@ -44,9 +44,6 @@ public class AppConfig {
       Properties props=new Properties();
       props.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
       props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
-      props.put("hibernate.connection.useUnicode", env.getProperty("hibernate.connection.useUnicode"));
-      props.put("hibernate.connection.characterEncoding", env.getProperty("hibernate.connection.characterEncoding"));
-      props.put("hibernate.connection.charSet", env.getProperty("hibernate.connection.charSet"));
 
       factoryBean.setHibernateProperties(props);
       factoryBean.setAnnotatedClasses(User.class, Car.class);
